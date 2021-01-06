@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bday.MainPage">
+
+    <AbsoluteLayout>
+        <Picker x:Name="Holiday" AbsoluteLayout.LayoutBounds="90,50,160,50">
+            <Picker.Items>
+                <x:String>Christmas</x:String>
+                <x:String>New Year</x:String>
+                <x:String>Easter</x:String>
+                <x:String>Halloween</x:String>
+                <x:String>Independence Day</x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry x:Name="phNum" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="90,100,160,50" Placeholder="Phonenumber"></Entry>
+        <Button Text="Send" AbsoluteLayout.LayoutBounds="90,160,160,50" Clicked="Button_Clicked"></Button>
+    </AbsoluteLayout>
+
+</ContentPage>
