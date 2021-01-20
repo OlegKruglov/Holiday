@@ -14,13 +14,45 @@ namespace Bday
         public MainPage()
         {
             InitializeComponent();
+            Holiday.Items.Add("Halloween");
+            Holiday.Items.Add("Easter");
+            Holiday.Items.Add("Christmas");
+            Holiday.Items.Add("New Year");
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            if (Holiday.SelectedItem == "New Year")
+            {
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                    smsMessenger.SendSms(phNum.Text, "Happy New Year!");
+            }
+            if (Holiday.SelectedItem == "Halloween")
+            {
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                    smsMessenger.SendSms(phNum.Text, "Happy Halloween!");
+            }
+            if (Holiday.SelectedItem == "Easter")
+            {
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                    smsMessenger.SendSms(phNum.Text, "Happy Easter!");
+            }
+            if (Holiday.SelectedItem == "Christmas")
+            {
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                    smsMessenger.SendSms(phNum.Text, "Merry Christmas!");
+            }
+        }
+
+        private void custom_Clicked(object sender, EventArgs e)
+        {
             var smsMessenger = CrossMessaging.Current.SmsMessenger;
             if (smsMessenger.CanSendSms)
-                smsMessenger.SendSms(phNum.Text, Holiday.SelectedItem);
+                smsMessenger.SendSms(phNum.Text,own.Text);
         }
     }
 }

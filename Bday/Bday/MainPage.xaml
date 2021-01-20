@@ -4,17 +4,13 @@
              x:Class="Bday.MainPage">
 
     <AbsoluteLayout>
-        <Picker x:Name="Holiday" AbsoluteLayout.LayoutBounds="90,50,160,50">
-            <Picker.Items>
-                <x:String>Christmas</x:String>
-                <x:String>New Year</x:String>
-                <x:String>Easter</x:String>
-                <x:String>Halloween</x:String>
-                <x:String>Independence Day</x:String>
-            </Picker.Items>
+        <Picker x:Name="Holiday" AbsoluteLayout.LayoutBounds="120,50,160,50">
+            
         </Picker>
-        <Entry x:Name="phNum" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="90,100,160,50" Placeholder="Phonenumber"></Entry>
-        <Button Text="Send" AbsoluteLayout.LayoutBounds="90,160,160,50" Clicked="Button_Clicked"></Button>
+        <Entry x:Name="phNum" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="120,100,160,50" Placeholder="Phonenumber"></Entry>
+        <Button Text="Send" AbsoluteLayout.LayoutBounds="120,160,160,50" Clicked="Button_Clicked"></Button>
+        <Entry x:Name="own" AbsoluteLayout.LayoutBounds="120,220,160,50" Placeholder="Own Meassage"></Entry>
+        <Button x:Name="custom" Text="Send custom message" AbsoluteLayout.LayoutBounds="120,270,160,70" Clicked="custom_Clicked"></Button>
     </AbsoluteLayout>
 
 </ContentPage>
