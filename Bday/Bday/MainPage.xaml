@@ -4,13 +4,14 @@
              x:Class="Bday.MainPage">
 
     <AbsoluteLayout>
-        <Picker x:Name="Holiday" AbsoluteLayout.LayoutBounds="120,50,160,50">
-            
+        <Label Text="Holiday Congratulation" AbsoluteLayout.LayoutBounds="110,0,150,50" FontSize="14"></Label>
+        <Picker x:Name="Holiday" AbsoluteLayout.LayoutBounds="100,50,160,50">
         </Picker>
-        <Entry x:Name="phNum" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="120,100,160,50" Placeholder="Phonenumber"></Entry>
-        <Button Text="Send" AbsoluteLayout.LayoutBounds="120,160,160,50" Clicked="Button_Clicked"></Button>
-        <Entry x:Name="own" AbsoluteLayout.LayoutBounds="120,220,160,50" Placeholder="Own Meassage"></Entry>
-        <Button x:Name="custom" Text="Send custom message" AbsoluteLayout.LayoutBounds="120,270,160,70" Clicked="custom_Clicked"></Button>
+        <Entry x:Name="phNum" Keyboard="Numeric" AbsoluteLayout.LayoutBounds="100,100,160,50" Placeholder="Phonenumber"></Entry>
+        <Button x:Name="btn1" Text="Send" AbsoluteLayout.LayoutBounds="100,160,160,50" Clicked="Button_Clicked"></Button>
+        <Entry x:Name="own" AbsoluteLayout.LayoutBounds="100,220,160,50" Placeholder="Own Message"></Entry>
+        <Button x:Name="custom" Text="Send custom message" AbsoluteLayout.LayoutBounds="100,270,160,70" Clicked="custom_Clicked"></Button>
+        <Image Source="holiday.png" AbsoluteLayout.LayoutBounds="0,420,360,200"></Image>
     </AbsoluteLayout>
 
 </ContentPage>

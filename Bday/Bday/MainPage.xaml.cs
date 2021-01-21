@@ -18,6 +18,7 @@ namespace Bday
             Holiday.Items.Add("Easter");
             Holiday.Items.Add("Christmas");
             Holiday.Items.Add("New Year");
+            Holiday.Items.Add("Birthday");
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -45,6 +46,12 @@ namespace Bday
                 var smsMessenger = CrossMessaging.Current.SmsMessenger;
                 if (smsMessenger.CanSendSms)
                     smsMessenger.SendSms(phNum.Text, "Merry Christmas!");
+            }
+            if (Holiday.SelectedItem == "Birthday")
+            {
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                    smsMessenger.SendSms(phNum.Text, "Happy Birthday!");
             }
         }
 
